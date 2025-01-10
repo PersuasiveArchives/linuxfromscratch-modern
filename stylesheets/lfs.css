@@ -1,33 +1,43 @@
 /* Global settings */
 body {
-  font-family: verdana, tahoma, arial, sans-serif;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
   text-align: left;
-  background: #fff;
-  color: #222;
+  background: #181818;  /* Darker background for better contrast */
+  color: #e0e0e0;  /* Lighter text for better readability */
   margin: 1em;
   padding: 0;
   font-size: 1em;
-  line-height: 1.2em;
+  line-height: 1.6em;  /* Increased line height for easier reading */
 }
 
-
 /* Links */
-a:link { color: #22b; }
-a.ulink:link { font-weight: bold; color: #55f; }
-a:visited { color: #7e4988 ! important; }
-a:hover, a:focus { color: #d30e08 ! important; }
-a:active { color: #6b77b1 ! important;}
-
+a:link {
+  color: #80aaff;  /* Soft blue for links */
+}
+a.ulink:link {
+  font-weight: bold;
+  color: #66aaff;  /* Slightly darker blue for bold links */
+}
+a:visited {
+  color: #c0aaff !important;  /* Light purple for visited links */
+}
+a:hover, a:focus {
+  color: #ff6666 !important;  /* Red for hover/focus states */
+}
+a:active {
+  color: #ffb3b3 !important;  /* Light pinkish-red for active links */
+}
 
 /* Book titlepage */
 .book .titlepage {
-  background: #f5f6f7;
+  background: #2c2c2c;  /* Dark background for titlepage */
   margin: 0px auto;
   padding: 0 1em;
+  color: #e0e0e0;  /* Light text color for titlepage */
 }
 
 .book hr {
-  background: #dbddec;
+  background: #555555;  /* Soft gray divider for contrast */
   height: .3em;
   border: 0px;
   margin: 0 -1em;
@@ -36,17 +46,23 @@ a:active { color: #6b77b1 ! important;}
 
 div.dedication {
   padding-left: 1em;
+  color: #b0b0b0;  /* Slightly muted text for dedication */
 }
 
 /* Section titles */
-h1.sect1, h1.preface, h1.part, h1.chapter, h1.appendix, .glossary h1, .index h1
- {
-  background: #f5f6f7;
-  border-bottom: .1em solid #dbddec;
-  margin-bottom:1em;
+h1.sect1, h1.preface, h1.part, h1.chapter, h1.appendix, .glossary h1, .index h1 {
+  background: #333;  /* Darker background for header */
+  border-bottom: .1em solid #555;  /* Darker border for better contrast */
+  margin-bottom: 1em;
   margin-top: 0;
-  padding: .4em;
+  padding: .2em;
+  color: #e0e0e0;  /* Light text color for visibility */
 }
+
+h1.sect1:hover, h1.preface:hover, h1.part:hover, h1.chapter:hover, h1.appendix:hover, .glossary h1:hover, .index h1:hover {
+  background: #444;  /* Slightly lighter background on hover */
+}
+
 
 /* Scrolling parts
    The header is taller for sect1 and chapter pages than on the
@@ -60,14 +76,20 @@ div.preface, div.part, .index div.index {
   top: 10.15em;
 }
 div.sect1, div.appendix, div.preface, div.part, div.chapter, div.wrap, .index div.index {
-/*  padding-left: .3em;*/
-  overflow:auto;
+  overflow: auto;
   height: auto;
   position: fixed;
-  left:1em;
-  right:1em;
+  left: 1em;
+  right: 1em;
   bottom: 1em;
-  border-bottom: 1em solid #dbddec;
+  border-bottom: 1em solid #555;  /* Darker border for contrast */
+  background: #2c2c2c;  /* Dark background to match dark mode */
+  color: #e0e0e0;  /* Light text color for readability */
+  padding: 1em;  /* Add some padding for spacing */
+}
+
+div.sect1:hover, div.appendix:hover, div.preface:hover, div.part:hover, div.chapter:hover, div.wrap:hover, .index div.index:hover {
+  background: #444;  /* Lighter background on hover to provide feedback */
 }
 
 div.important ul {
@@ -142,7 +164,7 @@ h2 {
 
 .book h2.subtitle {
   text-align: center;
-  background: #dbddec;
+  background: #565658;
   margin: 0;
   padding: 0.2em;
 }
@@ -169,44 +191,37 @@ h4 {
 
 /* Navigation */
 div.navheader, div.navfooter {
-  background: #ecedef;
+  background: #2c2c2c;  /* Dark background for both header and footer */
   margin: 0;
   padding: 0.1em .5em;
 }
 
 div.navheader {
-  border-bottom: .1em solid #dbddec;
+  border-bottom: .1em solid #444;  /* Darker border for navheader */
 }
 
 /* no need for a footer now that the header is always visible */
 div.navfooter {
-  display:none;
+  display: none;
 }
 
-/* Except for the first page (TOC), where the bottom is the only
-   place where navigation is displayed. */
-
+/* Except for the first page (TOC), where the bottom is the only place where navigation is displayed. */
 div.book + div.navfooter {
-  display:block
+  display: block;
 }
 
-div.navheader h4 {
+div.navheader h4, div.navheader h3 {
   margin-top: .4em;
   margin-bottom: 0;
   text-align: center;
-}
-
-div.navheader h3 {
-  margin-top: .2em;
-  margin-bottom: 0;
-  text-align: center;
+  color: #e0e0e0;  /* Light text color for the header */
 }
 
 div.navheader ul, div.navfooter ul {
-  padding: .2em .5em .5em .5em; /*top right bottom left*/
+  padding: .2em .5em .5em .5em; /* top right bottom left */
   margin: .5em 0;
   position: relative;
-  background: #dbddec;
+  background: #444;  /* Dark background for nav lists */
 }
 
 div.navheader ul li, div.navfooter ul li {
@@ -221,6 +236,7 @@ div.navheader ul li.prev, div.navfooter ul li.prev {
   text-align: left;
   padding: 0.2em 1em;
   margin-left: .4em;
+  color: #e0e0e0;  /* Light color for navigation text */
 }
 
 div.navheader ul li.next, div.navfooter ul li.next {
@@ -230,6 +246,7 @@ div.navheader ul li.next, div.navfooter ul li.next {
   right: 0;
   padding: 0.2em 1em;
   margin-right: .4em;
+  color: #e0e0e0;  /* Light color for navigation text */
 }
 
 div.navheader ul li.prev p, div.navfooter ul li.prev p,
@@ -244,8 +261,14 @@ div.navfooter ul li.home, div.navfooter ul li.up {
   padding: 0;
   margin: 0 auto;
   display: block;
-  color: #dbddec;
+  color: #bbb;  /* Slightly lighter color for home/up links */
 }
+
+/* Optional: Add hover effects for navigation links */
+div.navheader ul li:hover, div.navfooter ul li:hover {
+  background-color: #555;  /* Darker background on hover */
+}
+
 
 
 /* TOC */
@@ -267,6 +290,7 @@ div.toc {
 
 div.toc h3 {
   margin: 1em 0 .3em 0;
+  color:#a0a0a0
 }
 
 li.appendix h3, li.glossary h3, li.index h3 {
@@ -275,6 +299,7 @@ li.appendix h3, li.glossary h3, li.index h3 {
 
 div.toc h4 {
   margin: .6em 0 .2em 0;
+  color:#444
 }
 
 li.chapter h4 a {
@@ -345,11 +370,12 @@ div.note, div.tip {
 }
 
 div.important, div.warning, div.caution {
-  background-color: #fffff6;
+  background-color: #818181;
   border: medium solid #400;
   width: 90%;
   margin: .5em auto;
   color: #600;
+  border-radius: 9px 
 }
 
 div.important h3, div.warning h3, div.caution h3 {
@@ -660,4 +686,7 @@ p.updated {
   /* Sienna*/
 .feature-blowfish {
   color: #8E6B23
+}
+h3{
+  color:grey
 }
