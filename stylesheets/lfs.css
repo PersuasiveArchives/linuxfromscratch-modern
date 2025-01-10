@@ -364,8 +364,8 @@ div.admon pre {
 }
 
 div.note, div.tip {
-  background-color: #fffff6;
-  border: 2px solid #dbddec;
+  background-color: #383838;
+  border: 2px solid #727272;
   width: 90%;
   margin: .5em auto;
 }
@@ -376,7 +376,14 @@ div.important, div.warning, div.caution {
   width: 90%;
   margin: .5em auto;
   color: #600;
-  border-radius: 9px 
+  border-radius: 9px;
+  transition: all 0.3s ease;  /* Smooth transition for all properties */
+  padding: 1em;  /* Add some padding for content inside */
+}
+
+div.important:hover, div.warning:hover, div.caution:hover {
+  width: 95%;  /* Increase width on hover */
+  transform: scale(1.01);  /* Slightly scale up the element for a more noticeable effect */
 }
 
 div.important h3, div.warning h3, div.caution h3 {
@@ -387,6 +394,7 @@ div.important em, div.warning em, div.caution em {
   color: #000;
   font-weight: bold;
 }
+
 
 
 /* table */
@@ -693,4 +701,7 @@ h3{
 }
 a {
   text-decoration: none;
+}
+h2 {
+  color: grey;
 }
